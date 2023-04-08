@@ -5,11 +5,11 @@ use std::path::PathBuf;
 pub struct Args {
     /// Optional name to operate on
     #[arg(short, long)]
-    path: PathBuf,
+    pub path: PathBuf,
 }
 
 impl Args {
-    pub fn get_args() -> Self {
+    pub fn get() -> Self {
         Args::parse()
     }
 }
